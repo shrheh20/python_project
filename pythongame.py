@@ -18,7 +18,7 @@ pygame.display.set_caption('A bit Racey')
 clock = pygame.time.Clock()
 backgroundImg = pygame.image.load(" ").convert()  \\ <-----add image here
 
-carImg = pygame.image.load('car.png')
+carImg = pygame.image.load('car1.jpg')
 carImg = pygame.transform.scale(carImg,(58,91))
 
 #######
