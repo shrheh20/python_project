@@ -16,6 +16,7 @@ car_width = 73
 gameDisplay = pygame.display.set_mode((display_width,display_height))
 pygame.display.set_caption('A bit Racey')
 clock = pygame.time.Clock()
+backgroundImg = pygame.image.load(" ").convert()  \\ <-----add image here
 
 carImg = pygame.image.load('car.png')
 carImg = pygame.transform.scale(carImg,(58,91))
@@ -96,7 +97,7 @@ def game_loop():
             thing_starty = 0 - thing_radius
             thing_startx = random.randrange(0,display_width-thing_radius)
             
-        
+        screen.blit(backgroundImg, [0, 0])
         pygame.display.update()
         clock.tick(60)
 
