@@ -16,7 +16,7 @@ block_color = (53,115,255)
 car_width = 58
 
 screen = pygame.display.set_mode((display_width,display_height))
-pygame.display.set_caption('A bit Racey')
+pygame.display.set_caption('Fast:10 Your Seatbelts')
 clock = pygame.time.Clock()
 
 #car image
