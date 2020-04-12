@@ -16,7 +16,7 @@ block_color = (53,115,255)
 car_width = 58
 
 screen = pygame.display.set_mode((display_width,display_height))
-pygame.display.set_caption('Fast:10 Your Seatbelts')
+pygame.display.set_caption('A bit Racey')
 clock = pygame.time.Clock()
 
 #car image
@@ -67,7 +67,7 @@ def game_loop():
 
     x_change = 0
 
-    thing_startx = random.randrange(158,700)
+    thing_startx = random.randrange(200,600)
     thing_starty = -600
     thing_speed = 4
     thing_radius = 40
@@ -87,9 +87,9 @@ def game_loop():
 
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
-                    x_change = -5
+                    x_change = -7
                 if event.key == pygame.K_RIGHT:
-                    x_change = 5
+                    x_change = 7
 
             if event.type == pygame.KEYUP:
                 if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
@@ -101,7 +101,7 @@ def game_loop():
         elif x >= 600:
             x = 600
             
-        # things(thingx, thingy, thingr, color)
+        #things(thingx, thingy, thingr, color)
         things(thing_startx, thing_starty, thing_radius, block_color)
 
 
@@ -115,7 +115,7 @@ def game_loop():
 
         if thing_starty > display_height:
             thing_starty = 0 - thing_radius
-            thing_startx = random.randrange(0,display_width)
+            thing_startx = random.randrange(150,700)
             dodged += 1
             thing_speed += 1
             thing_radius += dodged
